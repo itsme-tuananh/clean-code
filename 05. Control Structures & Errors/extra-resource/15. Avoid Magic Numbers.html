@@ -1,0 +1,3 @@
+<p>There's one <strong>additional tweak</strong> you might want to make to the code.</p><p>At the moment, we always check for hard-coded string identifiers like <code>"PAYPAL"</code>&nbsp;or <code>"CREDIT_CARD"</code>.</p><p>You typically want to <strong>avoid</strong> this - not just for cleanness but also to <strong>avoid errors</strong> (e.g. due to typos).</p><p>Hence it is a better practice to use <strong>enums</strong> - if your programming language supports that - <strong>or</strong> <strong>constants</strong>.</p><pre class="prettyprint linenums">const TYPE_CREDIT_CARD&nbsp;=&nbsp;'CREDIT_CARD';
+//&nbsp;...
+if (transaction.type ===&nbsp;TYPE_CREDIT_CARD) { ... }</pre>
